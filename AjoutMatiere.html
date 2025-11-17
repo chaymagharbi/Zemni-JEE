@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ajouter une Matière</title>
+</head>
+<body>
+
+  <h2>Ajouter une nouvelle matière</h2>
+
+  <form action="Controller">
+      <label for="subjectId">ID de la matière :</label><br/>
+      <input type="number" id="subjectId" name="subjectId" required />
+      <label for="subjectTitle">Titre de la matière :</label><br/>
+      <input type="text" id="subjectTitle" name="subjectTitle" required />
+      <label for="hoursNbr">Nombre d'heures :</label><br/>
+      <input type="number" id="hoursNbr" name="hoursNbr" required />
+      <label for="prerequisites">Prérequis :</label><br/>
+      <textarea id="prerequisites" name="prerequisites" rows="4" required></textarea>
+      <label for="targetPopu">target Popu :</label><br/>
+      <input type="text" id="targetPopu" name="targetPopu" required />
+      <label for="teacherId">indiquez l'enseignant :</label><br/>
+      <c:forEach var="t" items="${requestScope.listTeachers}">
+      <option value=""> </option>
+	  </c:forEach>
+    <button type="submit" name="M=myBtn" value="1jouter matiere">Ajouter</button>
+  </form>
+
+</body>
+</html>
