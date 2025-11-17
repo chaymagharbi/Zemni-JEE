@@ -1,0 +1,649 @@
+فاطمة استيك, [04-05-2025 23:35]
+@charset "UTF-8";
+
+.carte-container {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.carte {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.carte:hover {
+  transform: scale(1.05);
+}
+
+.carte img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.carte-content {
+  padding: 16px;
+  background-color: #fff;
+}
+
+.carte-content h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.carte-content p {
+  color: #555;
+  font-size: 14px;
+}
+
+.admin-actions-global {
+    position: relative; /* plus logique que fixed pour l'avoir à la même hauteur que la navbar */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 1000;
+}
+
+/* Le bouton principal (admin) comme une icône classique (type FB, Instagram) */
+.admin-main-btn {
+    background-color: transparent; /* fond transparent pour avoir juste l'icône */
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: #333;
+    font-size: 24px; /* Taille plus grande pour l'icône */
+    border-radius: 50%; /* bouton rond */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.admin-main-btn:hover {
+    background-color: #f5f5f5; /* Légère couleur de fond au survol */
+    transform: scale(1.1);
+}
+
+/* Le menu admin caché au début */
+.admin-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* sous le bouton admin */
+    right: 0;
+    background: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Montrer le menu quand il y a la classe show */
+.admin-menu.show {
+    display: flex;
+}
+
+/* Boutons du menu admin (ajouter, éditer, supprimer) */
+.admin-btn {
+    background-color: #f5f5f5;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    color: #333;
+    font-size: 18px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+.admin-btn:hover {
+    background-color: orange;
+    transform: scale(1.1);
+}
+
+.admin-btn i {
+    pointer-events: none;
+}
+
+
+.imgpr {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+فاطمة استيك, [04-05-2025 23:36]
+.imgpr {
+  position: relative;
+  width: 100%;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.imgpr img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+  letter-spacing: 2px;
+  font-weight: bold;
+  pointer-events: none;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 50px;
+  background-color: white;
+}
+
+.navbar-logo img {
+  height: 50px;
+  border-radius: 30px;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.navbar-start {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navbar-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.navbar-item {
+  padding: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.navbar-item:hover {
+  color: orange;
+}
+
+.navbar-end a {
+  font-size: 24px;
+  margin: 0 10px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.navbar-end a:hover {
+  color: orange;
+}
+
+.search-input {
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  margin-left: auto;
+}
+.map-link {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.map-link:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+.map-link i {
+    margin-left: 5px;
+    color: #d23c31;
+}
+
+فاطمة استيك, [04-05-2025 23:36]
+/* Style cohérent avec votre navbar existante */
+.search-input {
+  padding: 10px 20px;
+  border: 2px solid #f8f9fa;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  backdrop-filter: blur(5px);
+  transition: all 0.3s;
+  width: 200px;
+}
+
+.search-input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.search-input:focus {
+  width: 250px;
+  background: rgba(255,255,255,0.2);
+  outline: none;
+}
+
+nav form button {
+  background: none;
+  border: none;
+  color: white;
+  margin-left: -35px;
+  cursor: pointer;
+}
+.liste-cartes {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .carte {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px;
+        }
+        
+        .no-results p {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #666;
+        }
+.a-propos-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .slider-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(60%);
+      transition: opacity 1s ease-in-out;
+    }
+  }
+
+  .content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    max-width: 900px;
+    padding: 2rem;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+    .title {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #f8e6d4;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    .metaphor {
+      font-style: italic;
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: #ffe9c8;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #fdf5ef;
+      margin-bottom: 1rem;
+    }
+
+    .etudiantes {
+      margin-top: 2rem;
+      h2 {
+        font-weight: bold;
+        color: #f3dbc3;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        li {
+          font-weight: 500;
+          color: #f8e6d4;
+        }
+      }
+    }
+  }
+}
+.ajout-endroit-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f2e3cb;
+    background-image: url('/assets/logopr.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.ajout-endroit-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/logopr.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(6px);
+    z-index: 0;
+}
+
+فاطمة استيك, [04-05-2025 23:37]
+.ajout-endroit-container .form-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.ajout-endroit-container .form-box .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.ajout-endroit-container .form-box .logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    border-radius: 30px;
+}
+
+.ajout-endroit-container .form-box h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.ajout-endroit-container .form-box .subtext {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.ajout-endroit-container .form-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+فاطمة استيك, [04-05-2025 23:37]
+.ajout-endroit-container .form-box form label {
+    text-align: left;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.ajout-endroit-container .form-box form input {
+    padding: 0.6rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.ajout-endroit-container .form-box form .button-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.ajout-endroit-container .form-box form .button-group button {
+    flex: 1;
+    padding: 0.6rem;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.ajout-endroit-container .form-box form .button-group button.add-btn {
+    background-color: #222;
+    margin-right: 0.5rem;
+}
+
+.ajout-endroit-container .form-box form .button-group button.cancel-btn {
+    background-color: #888;
+}
+
+.ajout-endroit-container .form-box form .button-group button i {
+    font-size: 1.2rem;
+}
+/* Barre de recherche améliorée */
+.navbar-search form {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    padding: 5px 15px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar-search form:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-search input[type="text"] {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 200px;
+    font-size: 14px;
+    background: transparent;
+}
+
+.navbar-search .search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar-search .search-button:hover {
+    color: #000;
+}
+/* Styles pour la bannière */
+.hero-banner {
+  border-radius: 15px;
+ 
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.banner-image-container {
+    width: 100%;
+    height: 100%;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    font-style: italic;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    width: 80%;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Effets de guillemets */
+.banner-text::before,
+.banner-text::after {
+    content: '"';
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+
+.banner-text::before {
+    top: -30px;
+    left: -40px;
+}
+
+.banner-text::after {
+    bottom: -50px;
+    right: -40px;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 768px) {
+    .banner-text {
+        font-size: 1.8rem;
+    }
+    
+    .banner-text::before,
+    .banner-text::after {
+        font-size: 3rem;
+    }
+}
+
+/* Style pour le conteneur de carte */
+.cartes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+    padding: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Style pour chaque carte individuelle */
+.carte-container {
+    background: rgb(210, 180, 140);
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 100%;
+    height: 550px;
+    box-sizing: border-box;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e2e8f0;
+}
+
+.carte-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.carte-title {
+    font-size: 1.2rem;
+    margin: 0 0 4px 0;
+    color: #2d3748;
+}
+
+.card-description {
+    flex: 1;
+    overflow: hidden;
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0 0 12px 0;
+}
+
+.ellipsis {
+    cursor: pointer;
+    font-weight: bold;
+    user-select: none;
+    color: #4a5568;
+}
